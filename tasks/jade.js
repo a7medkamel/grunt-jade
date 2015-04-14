@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     // Loop through all files and write them to files
     this.files.forEach(function(fileObj) {
       // Reference to the dest dir
-      var dest = path.normalize(fileObj.dest + '/');
+      var dest = path.normalize(path.dirname(fileObj.dest) + '/');
       // Make the dest dir if it doesn't exist
       grunt.file.mkdir(dest);
 
